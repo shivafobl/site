@@ -1,0 +1,44 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+{% for post in posts  %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: auto;
+  height: auto;
+  text-align: center;
+  
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
+  width: 50%;
+}
+
+
+p {
+  font-family: cursive;
+}
+
+ h1{
+  color: #ffffff;
+  padding: 15px;
+}
+
+
+}
+</style>
+<img src='{{post.img.url}}' class="center" >
+<h1 style="color:red" >{{post.title}}</h1>
+<i>{{post.created_at}}</i>
+<b style="color:blue" >{{post.author}}</b>
+<p>{{post.description}}</p>
+{% endfor %}
+
+
+{% endblock %}

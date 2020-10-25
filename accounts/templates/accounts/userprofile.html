@@ -1,0 +1,46 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+	<h1 class="text-center" >ViewProfile</h1>
+
+	<table class="table table-borderd" style="background-color: powderblue">
+		<tr>
+			<th>FULLNAME:</th>
+			<td>{{user.first_name}}{{user.last_name}}</td>
+		</tr>
+
+		<tr>
+			<th>USERNAME:</th>
+			<td>{{user.username}}</td>
+		</tr>
+
+		<tr>
+			<th>EMAIL:</th>
+			<td>{{user.email}}</td>
+		</tr>
+
+		<tr>
+			<th>PHOTO:</th>
+			<td><img src="{{pro.image.url}}" style="height: 100px;width: 100px"></td>
+		</tr>
+		<tr>
+			<th>DOB:</th>
+			<td>{{pro.dob}}</td>
+		</tr>
+		<tr>
+			<th>MOBNO:</th>
+			<td>{{pro.mobileno}}</td>
+		</tr>
+	</table>
+	<div class="text-center" >
+		<a href="{% url 'editprofile' %}" class="btn btn-outline-primary btn-lg">EditProfile</a>
+	</div>
+	
+</div>
+
+
+
+
+{% endblock %}
